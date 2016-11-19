@@ -1,0 +1,23 @@
+ex1:print 后面加,会使得输出不换行
+ex2:#python单行注释
+ex3:print "Is it greater?",5.0>-2.0
+ex4:变量 cars = 100
+ex5:%r
+ex6:y = "Those who know %s,those who %s."%(binary,do_not)
+ex7:print "Its fleece was white as %s."%'snow'
+ex8:formatter = "%r %r %r %r" print formatter%(1,2,3,4)
+ex9:""" """任意写多少行
+ex10:\t \\a　转义
+ex11:raw_input()
+ex12:age = raw_input("How old are you ?")
+ex13:from sys import argv
+ex14:prompt = '>>' raw_input(prompt)
+ex15:文件的操作open(),close()
+ex16:文件操作　write() read()
+ex17:open(to_file,'w').write(open(from_file).read())
+ex18:函数，def print_love(*argv):
+ex19:函数cheese_and_crackers(amount_of_cheese,amount_of_crackers)　amount_of_cheese是脚本变量
+ex20:+=
+ex21:函数 return
+
+
