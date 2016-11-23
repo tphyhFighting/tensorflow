@@ -1,0 +1,7 @@
+# https://travis-ci.org/tornadoweb/tornado
+language: python
+python:
+  - 2.7
+script:
+- "ls -l;"
+- "cd LearningPythonHard;"
