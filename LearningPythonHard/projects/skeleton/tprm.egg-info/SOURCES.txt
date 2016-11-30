@@ -1,0 +1,8 @@
+setup.py
+bin/tprm
+src/tprm/myrm.py
+tprm.egg-info/PKG-INFO
+tprm.egg-info/SOURCES.txt
+tprm.egg-info/dependency_links.txt
+tprm.egg-info/requires.txt
+tprm.egg-info/top_level.txt

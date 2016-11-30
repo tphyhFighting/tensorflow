@@ -1,0 +1,2 @@
+关于python中的setup.py:http://lingxiankong.github.io/blog/2013/12/23/python-setup/
+使用python setup.py install 会把发布的模块拷贝到python类路径下，可以被导入使用

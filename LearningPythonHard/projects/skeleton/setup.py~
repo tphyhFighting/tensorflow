@@ -1,0 +1,18 @@
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+config = {
+    'description': 'My First Program say hello to world',
+    'author': 'tp',
+    'url': 'URL to get it at.',
+    'download_url': 'Where to download it,',
+    'author_email': '2363176358@qq.com',
+    'version': '1.0',
+    'install_requires': ['tprm'],
+    'packages': ['tprm'],
+　　　　'package_dir':{'tprm':'src/tprm'}
+    'scripts': ['bin/tprm'],
+    'name': 'tprm'
+}
+setup(**config)
