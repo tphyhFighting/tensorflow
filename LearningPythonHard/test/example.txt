@@ -1,0 +1,6 @@
+#coding:utf-8
+>>> from test import multiply
+>>> multiply(2,3)
+6
+>>> multiply('baka~',3)
+'baka~baka~baka~'
