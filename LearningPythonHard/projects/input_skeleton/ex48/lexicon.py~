@@ -8,8 +8,8 @@ sentence_all = (('direction','north'),('direction','south'),('direction','east')
 ('direction','right'),('direction','back'),('verb','go'),('verb','stop'),('verb','kill'),('verb','eat'),('stop','the'),('stop','in'),('stop','of'),('stop','from'),
 ('stop','at'),('stop','it'),('noun','door'),('noun','bear'),('noun','princess'),('noun','cabinet'))
 #stuff = raw_input(">")
-result = []
 def scan(stuff):
+    result = []
     flag = False
     words = stuff.split() 
     #print 'words',words
@@ -26,7 +26,7 @@ def scan(stuff):
             if s == None:
                 result.append(('error',word))
             else:
-                result.append(('number',word))
+                result.append(('number',s))
     return result
 def convert_number(s):
     try:
@@ -34,5 +34,5 @@ def convert_number(s):
     except ValueError:
         return None
 
-rt = scan(raw_input(">"))
-print rt
+#rt = scan(raw_input(">"))
+#print rt

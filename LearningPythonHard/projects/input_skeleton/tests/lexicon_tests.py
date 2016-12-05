@@ -25,6 +25,6 @@ def test_numbers():
     assert_equal(result,[('number',3),('number',91234)])
 def test_errors():
     assert_equal(lexicon.scan("ASDFADFASDF"),[('error','ASDFADFASDF')])
-    result = lexicon.scan("bear IAS printcess")
+    result = lexicon.scan("bear IAS princess")
     assert_equal(result,[('noun','bear'),('error','IAS'),('noun','princess')])
 
