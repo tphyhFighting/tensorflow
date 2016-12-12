@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+class Room(object):
+	def __init__(self,name,description):
+		self.name = name
+        　　　　　　　　self.description = description
+        　　　　　　　　self.paths = {}
+    　　　　def add_paths(self,paths):
+        　　　　　　　　self.paths.update(paths)
+	def go(self,direction):
+		return self.paths.get(direction,None)
+central_corridor = Room("Central Corridor",
+"""
+The Gothon of Planet Percal #25 have invaded your ship and destroyed your entire crew. You are the last surviving member and your last mission is to get the neutron destruce bomb from the Weapons Armory.put it in thr birdge,and blow the ship up after getting into an escape pod.
+""")
+laser_weapon_armory = Room("Laser Weapon Armory",
+"""
+Lucky for you they made you learn Gothon insults in the academy.If you get the code wrong 10 times then the lock closes forever and you can't get the bomb. The code is 3 digits.
+""")
+the_bridge = Room("The Bridge",
+"""
+The container clicks open and the seal breaks,letting gas out.They haven't pulled their weapons out yet ,as they see the active bomb under your arm and don't want to set it off.
+""")
+escape_pod = Room("Escape Pod",
+"""
+You point your blaster st the bomb under your arm and the Gothons put their hands up and start to sweat.There is 5 pods ,which one do you take?
+""")
+the_end_winner = Room("The End",
+"""
+You jump into pod 2 and hit the eject button.You won!
+""")
+the_end_loser = Room("The End",
+"""
+You jump into a random pod and hit the eject button.Then crushing your body into jam jelly.
+""")
+escape_pod.add_paths({
+	'2':the_end_winner,
+	'*':the_end_loser
+})
+generic_death = Room("death","You died.")
+the_bridge.add_paths({
+	'throw the bomb':generic_death,
+	'slowly place the bomb':escape_pod
+})
+laser_weapon_armory.add_paths({
+	'0132':the_bridge,
+	'*':generic_death
+})
+central_corridor.add_paths({
+	'shoot!':generic_death,
+	'dodge!':generic_death,
+	'tell a joke':laser_weapon_armory
+})
+START = central_corridor
