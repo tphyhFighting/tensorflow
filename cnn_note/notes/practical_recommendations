@@ -1,2 +1,5 @@
 practical recommendations for gradient-based training of deep architectures
+hyperparameter:
+1:learning rate:an observation that canguide heuristics for setting the learning rate,start with a large learning rate and if the trainging criterion diverges,try again with 3 times smaller learning rate until no divergence is observed.
+
 
