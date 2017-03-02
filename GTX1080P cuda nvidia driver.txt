@@ -1,0 +1,14 @@
+在终端输入nvidia-smi时，会出现：
+NVIDIA: could not open the device file /dev/nvidiactl (No such file or directory).
+NVIDIA-SMI has failed because it couldn't communicate with NVIDIA driver. Make sure that latest NVIDIA driver is installed and running
+解决办法：
+1：卸载nvidia driver 命令是：sudo apt-get purge nvidia*
+2：cuda8.0自带的驱动可以满足，所以还要卸载cuda8.0,然后在选择是否安装cuda自带的驱动时选择y
+3：卸载cuda8.0:用whereis cuda找到cuda安装的文件夹,cd 到bin文件夹，有一个卸载的文件 执行sudo ./uninstall_cuda_8.0.pl*
+4：之后就是安装cuda8.0了，安装过程如下：
+	(1)按ctrl+alt+F1,进入字符界面
+	(2)执行sudo /etc/init.d/lightdm stop关闭X-server图形窗口界面
+	(3)cd到cuda8.0下载的地方 执行sudo ./cuda_8.0.44_linux.run*
+	(4)在安装过程中,第一个填 accept 后面全部选择 y Location的地方可以直接回车，走默认安装路径
+	(5)安装完成后，执行 sudo /etc/init.d/lightdm start 开启X-server图形窗口界面
+	(6)打开终端,执行nvidia-smi,如果出来信息，就说明安装成功了。
